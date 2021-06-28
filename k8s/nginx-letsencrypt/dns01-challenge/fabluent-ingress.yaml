@@ -1,0 +1,64 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fabluent.com
+  namespace: prod
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    cert-manager.io/issuer: letsencrypt-welocal-dns
+    #cert-manager.io/cluster-issuer: "letsencrypt-staging"
+    #cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    #acme.cert-manager.io/http01-edit-in-place: "true"
+
+spec:
+  tls:
+  - hosts:
+    - fabluent.com
+    - communication.fabluent.com
+    - courses.fabluent.com
+    - auth.fabluent.com
+    secretName: fabluent-ingress-tls
+  ingressClassName: fab
+  rules:
+  - host: fabluent.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: fabluentfe
+            port:
+              number: 80
+  - host: communication.fabluent.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: email
+            port:
+              number: 80
+  - host: courses.fabluent.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: courses
+            port:
+              number: 80
+  - host: auth.fabluent.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: fabluentlogin
+            port:
+              number: 80
+  

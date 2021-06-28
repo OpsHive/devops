@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  namespace: prod
+  name: welocal-certificate
+spec:
+  secretName: welocal-ac-tls
+  issuerRef:
+    name: letsencrypt-welocal-dns
+  commonName: welocal.ac
+  dnsNames:
+  - welocal.shop
+  - "*.welocal.shop"

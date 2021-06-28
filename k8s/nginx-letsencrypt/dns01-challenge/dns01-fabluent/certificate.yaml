@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  namespace: prod
+  name: fabluent-certificate
+spec:
+  secretName: fabluent-ac-tls
+  issuerRef:
+    name: letsencrypt-fabluent-dns
+  commonName: fabluent.ac
+  dnsNames:
+  - fabluent.com
+  - "*.fabluent.com"
