@@ -8,7 +8,7 @@ create access_keys and configure your aws cli with keys and zone
 you can change your --name with your own cluster name.
 
 ```
-eksctl create cluster --name neuman-cluster --version 1.19 --managed --asg-access
+eksctl create neuman-so --version 1.19 --region us-east-2 --node-type t2.medium --nodes 2 --nodes-min 2 --nodes-max 10 --ssh-access --ssh-public-key neuman --asg-access --managed
 
 ```
 
