@@ -1,3 +1,29 @@
+## install cert-manger with helm 
+
+create cert-manager.values.yaml file with this content if you are using other example for this example you need to create cert-manger role and create attach policy for route53 
+
+```
+securityContext:
+  enabled: "true"
+serviceAccount:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::619449222344:role/cert-manager
+
+```
+
+
+
+install helm cert manager with your own cert-manager.values.yaml
+```
+helm template cert-manager jetstack/cert-manager \
+  --namespace cert-manager \
+  --version v1.5.1 \
+  --set installCRDs=true \
+  -f cert-manager.values.yaml | kubectl apply -f -
+```
+
+
+
 https://voyagermesh.com/docs/v12.0.0/guides/cert-manager/dns01_challenge/aws-route53/
 
 1. Go to IAM page and create a user with name dns-challenge
