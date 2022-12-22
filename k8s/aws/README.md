@@ -92,6 +92,11 @@ I0628 09:11:59.928322       1 pre_filtering_processor.go:66] Skipping ip-192-168
 I0628 09:11:59.928330       1 pre_filtering_processor.go:66] Skipping ip-192-168-35-206.us-east-2.compute.internal - node group min size reached
 I0628 09:11:59.928356       1 static_autoscaler.go:503] Scale down status: unneededOnly=true lastScaleUpTime=2021-06-28 09:09:09.413361771 +0000 UTC m=+36.631761087 lastScaleDownDeleteTime=2021-06-28 09:09:09.413361834 +0000 UTC m=+36.631761150 lastScaleDownFailTime=2021-06-28 09:09:09.413361902 +0000 UTC m=+36.631761216 scaleDownForbidden=false isDeleteInProgress=false scaleDownInCooldown=true
 ```
+# if you face problem which is following.
+```
+Failed to regenerate ASG cache: cannot autodiscover ASGs: AccessDenied: User: arn:aws:sts::095227294625:assumed-role/ni-auth-us-east-2-node-instance-r-NodeInstanceRole-1AN4LPQ8P10ME/i-082dbe0ba38453941 is not authorized to perform: autoscaling:DescribeTags because no identity-based policy allows the autoscaling:DescribeTags action status code: 403, request id: 99a899b7-b1da-46e2-9805-bd59e1004f73 F1222 11:02:41.180231 1 aws_cloud_provider.go:389] Failed to create AWS Manager: cannot autodiscover ASGs: AccessDenied: User: arn:aws:sts::095227294625:assumed-role/ni-auth-us-east-2-node-instance-r-NodeInstanceRole-1AN4LPQ8P10ME/i-082dbe0ba38453941 is not authorized to perform: autoscaling:DescribeTags because no identity-based policy allows the autoscaling:DescribeTags action status code: 403, request id
+```
+then  we need to find assumed-role like  which is in log like "assumed-role/ni-auth-us-east-2-node-instance-r-NodeInstanceRole-1AN4LPQ8P10ME/i-082dbe0ba38453941 is not authorized to perform" into aws iam and assign permission as AutoScalingFullAccess and restart your container.
 
 if you want to test then 
 
