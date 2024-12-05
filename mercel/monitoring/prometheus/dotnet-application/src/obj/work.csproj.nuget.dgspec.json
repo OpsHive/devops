@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/monitoring/prometheus/dotnet-application/src/work.csproj": {}
+  },
+  "projects": {
+    "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/monitoring/prometheus/dotnet-application/src/work.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/monitoring/prometheus/dotnet-application/src/work.csproj",
+        "projectName": "work",
+        "projectPath": "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/monitoring/prometheus/dotnet-application/src/work.csproj",
+        "packagesPath": "/home/opshive/.nuget/packages/",
+        "outputPath": "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/monitoring/prometheus/dotnet-application/src/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/opshive/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/home/opshive/.dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

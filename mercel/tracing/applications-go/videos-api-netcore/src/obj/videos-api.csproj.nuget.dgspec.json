@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/tracing/applications-go/videos-api-netcore/src/videos-api.csproj": {}
+  },
+  "projects": {
+    "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/tracing/applications-go/videos-api-netcore/src/videos-api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/tracing/applications-go/videos-api-netcore/src/videos-api.csproj",
+        "projectName": "videos-api",
+        "projectPath": "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/tracing/applications-go/videos-api-netcore/src/videos-api.csproj",
+        "packagesPath": "/home/opshive/.nuget/packages/",
+        "outputPath": "/home/opshive/workspace/qasim/storage/projects/opshive/devops/mercel/tracing/applications-go/videos-api-netcore/src/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/opshive/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Jaeger": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "OpenTracing.Contrib.NetCore": {
+              "target": "Package",
+              "version": "[0.7.1, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/opshive/.dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
